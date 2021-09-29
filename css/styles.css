@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    height: 5em;
+    background-color: rgb(136, 129, 192);
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    width: 50px;
+    height: 100vh;
+    background-color: rgb(75, 67, 117);
+}
+
+nav img {
+    margin: 10px;
+}
