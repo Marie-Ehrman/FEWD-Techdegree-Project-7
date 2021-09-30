@@ -1,8 +1,18 @@
+body {
+    display: grid;
+}
+
 header {
     display: flex;
     height: 5em;
     background-color: rgb(136, 129, 192);
     color: white;
+}
+
+header h1 {
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 2em;
 }
 
 nav {
