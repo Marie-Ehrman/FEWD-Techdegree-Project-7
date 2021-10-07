@@ -1,29 +1,45 @@
 body {
     display: grid;
+    grid-template-rows: 15vh auto;
+    grid-template-columns: 10vw auto;
 }
 
 header {
     display: flex;
-    height: 5em;
+    height: 15vh;
     background-color: rgb(136, 129, 192);
     color: white;
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 
 header h1 {
-    margin: 0 auto;
+    margin-right: auto;
     padding: 10px;
     font-size: 2em;
+}
+
+header img {
+    height: 90%;
+
 }
 
 nav {
     display: flex;
     flex-direction: column;
     align-self: baseline;
-    width: 50px;
+    width: 10vw;
     height: 100vh;
     background-color: rgb(75, 67, 117);
+    grid-row-start: 2;
 }
 
-nav img {
+nav svg {
     margin: 10px;
+    fill: white;
+}
+
+main {
+    grid-row-start: 2;
+    padding: 10px;
 }
