@@ -1,11 +1,11 @@
 .grid-container {
     display: grid;
-    grid-template-rows: 15vh auto;
-    grid-template-columns: 10vw auto;
-    grid-template-areas: 
-    "header header"
-    "nav nav"
-    "main main";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main";
 }
 
 header {
@@ -23,41 +23,72 @@ header h1 {
 }
 
 header img {
-    height: 90%;
+    height: 75%;
+    border-radius: 50%;
+    margin: 10px;
 
 }
 
 nav {
     grid-area: nav;
     display: flex;
-    height: 10vh;
     background-color: rgb(75, 67, 117);
+    padding: 1px;
+    justify-content: center;
 }
 
-nav svg {
+nav a svg {
     margin: 10px;
     fill: white;
-
+    height: 2em;
+    width: 2em;
+    
 }
 
 main {
+    display: grid;
     grid-area: main;
     padding: 10px;
 }
 
+.widget-container-full, .widget-container-half {
+    width: 95vw;
+}
 
-@media screen and (min-width: 768) {
-    header {
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
         grid-template-areas: 
         "header header"
-        "nav main"
         "nav main";
     }
 
     nav {
-
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
+    .main {
+        grid-template-columns: 50% ;
+        }
+
+    .widget-container-half {
+            width: 45vw;
+    }
+
+
+    .traffic, .social {
+        grid-column: 1 / span 2;
+        }
+
+    .daily, .members, .message {
+        grid-column: 1 / span 1;
+        }
+
+    .mobile, .activity, .settings {
+        grid-column: 2 / span 1;
+        }
 }
 
 
