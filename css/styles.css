@@ -1,16 +1,19 @@
-body {
+.grid-container {
     display: grid;
     grid-template-rows: 15vh auto;
     grid-template-columns: 10vw auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main";
 }
 
 header {
+    grid-area: header;
     display: flex;
     height: 15vh;
     background-color: rgb(136, 129, 192);
     color: white;
-    grid-column-start: 1;
-    grid-column-end: -1;
 }
 
 header h1 {
@@ -25,21 +28,39 @@ header img {
 }
 
 nav {
+    grid-area: nav;
     display: flex;
-    flex-direction: column;
-    align-self: baseline;
-    width: 10vw;
-    height: 100vh;
+    height: 10vh;
     background-color: rgb(75, 67, 117);
-    grid-row-start: 2;
 }
 
 nav svg {
     margin: 10px;
     fill: white;
+
 }
 
 main {
-    grid-row-start: 2;
+    grid-area: main;
     padding: 10px;
+}
+
+
+@media screen and (min-width: 768) {
+    header {
+        grid-template-areas: 
+        "header header"
+        "nav main"
+        "nav main";
+    }
+
+    nav {
+
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+    
 }
