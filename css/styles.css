@@ -23,10 +23,29 @@ header h1 {
 }
 
 header img {
-    height: 75%;
+    height: 50%;
     border-radius: 50%;
     margin: 10px;
+}
 
+.notifications-container {
+    display: flex;
+    margin: 25px;
+}
+
+.notifications-container svg {
+
+    fill: white;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+#notifications {
+    margin: -5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: rgb(122, 230, 122);
 }
 
 nav {
@@ -62,6 +81,12 @@ main {
         grid-template-areas: 
         "header header"
         "nav main";
+    }
+
+    header img {
+        height: 75%;
+        border-radius: 50%;
+        margin: 10px;
     }
 
     nav {
