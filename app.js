@@ -143,11 +143,24 @@ send.addEventListener('click', () => {
 
 //TRAFFIC BUTTONS
 
-const trafficButtons = document.querySelectorAll('traffic-nav-link');
+const trafficButtons = document.querySelectorAll('.traffic-nav-link');
 
-trafficButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        console.log("CLICK")
-        button.classList.add('active');
-    })
-});
+    //step over buttons to add event listener
+    trafficButtons.forEach(button => {
+        //Default to Hourly
+        if(button.textContent === "Hourly"){
+            button.classList.add('active')
+        }
+        
+        button.addEventListener('click', (e) => {
+            
+            //step over buttons to toggle between active class
+            trafficButtons.forEach(button => {
+                if(button.classList.contains('active')) {
+                    button.classList.remove('active');                    
+                }
+            })
+            console.log(trafficData)
+            button.classList.add('active');
+        })
+    });

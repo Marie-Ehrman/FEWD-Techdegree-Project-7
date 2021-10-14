@@ -193,7 +193,7 @@ main {
     padding: 5px;
 }
 
-.traffic-header li:active {
+.active {
     border:rgb(129, 201, 141);
     color: white;
     background-color: rgb(129, 201, 141);
