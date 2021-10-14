@@ -27,6 +27,8 @@ let trafficData = {
             data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
             2500],
             backgroundColor: 'rgba(116, 119, 191, .3)',
+            fill: true,
+            tension: .5,
             borderWidth: 1
         }
     ]
@@ -138,3 +140,14 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`);
     }
     });
+
+//TRAFFIC BUTTONS
+
+const trafficButtons = document.querySelectorAll('traffic-nav-link');
+
+trafficButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        console.log("CLICK")
+        button.classList.add('active');
+    })
+});
